@@ -16,7 +16,8 @@
     "require": {
         "pantheon-upstreams/upstream-configuration": "*",
         "drush/drush": "^10",
-        "drupal/gin": "^3.0"
+        "drupal/gin": "^3.0",
+        "drupal/pathauto": "^1.8"
     },
     "conflict": {
             "drupal/drupal": "*"
