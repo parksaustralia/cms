@@ -14,10 +14,14 @@
         }
     ],
     "require": {
-        "pantheon-upstreams/upstream-configuration": "*",
-        "drush/drush": "^10",
+        "drupal/gatsby": "^1.0@RC",
+        "drupal/gatsby_endpoints": "1.x-dev",
+        "drupal/gatsby_fastbuilds": "^1.0@RC",
+        "drupal/gatsby_instantpreview": "^1.0@RC",
         "drupal/gin": "^3.0",
-        "drupal/pathauto": "^1.8"
+        "drupal/pathauto": "^1.8",
+        "drush/drush": "^10",
+        "pantheon-upstreams/upstream-configuration": "*"
     },
     "conflict": {
             "drupal/drupal": "*"
