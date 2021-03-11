@@ -14,10 +14,7 @@
         }
     ],
     "require": {
-        "drupal/gatsby": "^1.0@RC",
-        "drupal/gatsby_endpoints": "1.x-dev",
-        "drupal/gatsby_fastbuilds": "^1.0@RC",
-        "drupal/gatsby_instantpreview": "^1.0@RC",
+        "drupal/gatsby": "1.x-dev",
         "drupal/gin": "^3.0",
         "drupal/pathauto": "^1.8",
         "drush/drush": "^10",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c29d484b270fe0b8e728950b48c42c1",
+    "content-hash": "1de3b64ec18ecc3aa48e708eaf12b2e5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1836,86 +1836,21 @@
         },
         {
             "name": "drupal/gatsby",
-            "version": "1.0.0-rc3",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gatsby.git",
-                "reference": "8.x-1.0-rc3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gatsby-8.x-1.0-rc3.zip",
-                "reference": "8.x-1.0-rc3",
-                "shasum": "dcb718f2a996861558103eee803609ed771f7aae"
+                "reference": "9e2319d34bb30e6cce00185b55b8e0673ad41131"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9",
+                "drupal/jsonapi_extras": "^3"
             },
             "require-dev": {
                 "drupal/gatsby_instantpreview": "*",
                 "drupal/jsonapi_extras": "*"
             },
             "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-rc3",
-                    "datestamp": "1600111988",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "codekarate",
-                    "homepage": "https://www.drupal.org/user/506260"
-                },
-                {
-                    "name": "drupalninja99",
-                    "homepage": "https://www.drupal.org/user/42248"
-                },
-                {
-                    "name": "iansholtys",
-                    "homepage": "https://www.drupal.org/user/3108171"
-                },
-                {
-                    "name": "johnnybgoode",
-                    "homepage": "https://www.drupal.org/user/980926"
-                },
-                {
-                    "name": "larowlan",
-                    "homepage": "https://www.drupal.org/user/395439"
-                },
-                {
-                    "name": "mrjmd",
-                    "homepage": "https://www.drupal.org/user/1800446"
-                }
-            ],
-            "description": "Enables Live Preview for Gatsby",
-            "homepage": "https://www.drupal.org/project/gatsby",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/gatsby",
-                "issues": "https://www.drupal.org/project/issues/gatsby"
-            }
-        },
-        {
-            "name": "drupal/gatsby_endpoints",
-            "version": "dev-1.x",
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/gatsby": "^1",
-                "drupal/gatsby_instantpreview": "*",
-                "drupal/jsonapi_extras": "*"
-            },
-            "type": "metapackage",
             "extra": {
                 "branch-alias": {
                     "dev-1.x": "1.x-dev"
@@ -1959,120 +1894,14 @@
                     "homepage": "https://www.drupal.org/user/1800446"
                 }
             ],
-            "description": "Create multiple endpoints that can be used to source content into Gatsby sites (under active development and should be considered experimental).",
+            "description": "Enables Live Preview for Gatsby",
             "homepage": "https://www.drupal.org/project/gatsby",
+            "keywords": [
+                "Drupal"
+            ],
             "support": {
-                "source": "https://git.drupalcode.org/project/gatsby"
-            }
-        },
-        {
-            "name": "drupal/gatsby_fastbuilds",
-            "version": "1.0.0-rc3",
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/gatsby": "^1",
-                "drupal/gatsby_instantpreview": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-rc3",
-                    "datestamp": "1600111988",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "codekarate",
-                    "homepage": "https://www.drupal.org/user/506260"
-                },
-                {
-                    "name": "drupalninja99",
-                    "homepage": "https://www.drupal.org/user/42248"
-                },
-                {
-                    "name": "iansholtys",
-                    "homepage": "https://www.drupal.org/user/3108171"
-                },
-                {
-                    "name": "johnnybgoode",
-                    "homepage": "https://www.drupal.org/user/980926"
-                },
-                {
-                    "name": "larowlan",
-                    "homepage": "https://www.drupal.org/user/395439"
-                },
-                {
-                    "name": "mrjmd",
-                    "homepage": "https://www.drupal.org/user/1800446"
-                }
-            ],
-            "description": "Enables faster Gatsby development builds by only downloading content that has changed",
-            "homepage": "https://www.drupal.org/project/gatsby",
-            "support": {
-                "source": "https://git.drupalcode.org/project/gatsby"
-            }
-        },
-        {
-            "name": "drupal/gatsby_instantpreview",
-            "version": "1.0.0-rc3",
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/gatsby": "*",
-                "drupal/jsonapi_extras": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-rc3",
-                    "datestamp": "1600111988",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "codekarate",
-                    "homepage": "https://www.drupal.org/user/506260"
-                },
-                {
-                    "name": "drupalninja99",
-                    "homepage": "https://www.drupal.org/user/42248"
-                },
-                {
-                    "name": "iansholtys",
-                    "homepage": "https://www.drupal.org/user/3108171"
-                },
-                {
-                    "name": "johnnybgoode",
-                    "homepage": "https://www.drupal.org/user/980926"
-                },
-                {
-                    "name": "larowlan",
-                    "homepage": "https://www.drupal.org/user/395439"
-                },
-                {
-                    "name": "mrjmd",
-                    "homepage": "https://www.drupal.org/user/1800446"
-                }
-            ],
-            "description": "Enables a faster preview exerience and incremental builds support when using JSON:API and gatsby-source-drupal",
-            "homepage": "https://www.drupal.org/project/gatsby",
-            "support": {
-                "source": "https://git.drupalcode.org/project/gatsby"
+                "source": "http://cgit.drupalcode.org/gatsby",
+                "issues": "https://www.drupal.org/project/issues/gatsby"
             }
         },
         {
@@ -7078,10 +6907,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/gatsby": 5,
-        "drupal/gatsby_endpoints": 20,
-        "drupal/gatsby_fastbuilds": 5,
-        "drupal/gatsby_instantpreview": 5
+        "drupal/gatsby": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
