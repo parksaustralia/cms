@@ -2532,7 +2532,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gatsby.git",
-                "reference": "316cd1515a58765184b14fbd32e3dd1655addb3a"
+                "reference": "4ba56e4b558d0bf61eb32836a4b7bfcc3823a569"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -2548,8 +2548,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc3+34-dev",
-                    "datestamp": "1615848737",
+                    "version": "8.x-1.0-rc3+35-dev",
+                    "datestamp": "1615849511",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
