@@ -68,6 +68,12 @@
         "[project-root]/pantheon.upstream.yml": false,
         "[project-root]/.gitattributes": false
       }
+    },
+    "enable-patching": true,
+    "patches": {
+      "drupal/core": {
+        "jsonapi-filtering-3036593-118": "./patches/drupal-3036593-118.patch"
+      }
     }
   },
   "config": {
