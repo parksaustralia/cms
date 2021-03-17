@@ -15,7 +15,6 @@
     ],
     "require": {
         "drupal/devel_entity_updates": "^3.0",
-        "drupal/gatsby": "1.x-dev",
         "drupal/gin": "^3.0",
         "drupal/key_auth": "^1.1",
         "drupal/pathauto": "^1.8",
