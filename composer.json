@@ -19,6 +19,7 @@
     "drupal/gin": "^3.0",
     "drupal/key_auth": "^1.1",
     "drupal/pathauto": "^1.8",
+    "drupal/unmanaged_files": "^1.0",
     "drush/drush": "^10",
     "enlightn/security-checker": "^1.7",
     "pantheon-upstreams/upstream-configuration": "*"
