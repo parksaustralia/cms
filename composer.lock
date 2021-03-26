@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a086d1d6d26528629ad7b6481e10c49b",
+    "content-hash": "69a3a962d528487599d282adccba5931",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2591,7 +2591,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gatsby.git",
-                "reference": "e7b27cce2277375377f9f28ce6881522e9063647"
+                "reference": "9cca73c01c9025d684e1cff659822150d1ab2232"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -2607,8 +2607,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc3+36-dev",
-                    "datestamp": "1615876218",
+                    "version": "8.x-1.0-rc3+38-dev",
+                    "datestamp": "1616446893",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."

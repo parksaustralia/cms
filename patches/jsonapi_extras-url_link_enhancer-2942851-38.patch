@@ -1,0 +1,103 @@
+diff --git a/src/Plugin/jsonapi/FieldEnhancer/UrlLinkEnhancer.php b/src/Plugin/jsonapi/FieldEnhancer/UrlLinkEnhancer.php
+new file mode 100644
+index 0000000..3b4b204
+--- /dev/null
++++ b/src/Plugin/jsonapi/FieldEnhancer/UrlLinkEnhancer.php
+@@ -0,0 +1,97 @@
++<?php
++
++namespace Drupal\jsonapi_extras\Plugin\jsonapi\FieldEnhancer;
++
++use Drupal\Core\Url;
++use Drupal\jsonapi_extras\Plugin\ResourceFieldEnhancerBase;
++use Shaper\Util\Context;
++use Symfony\Component\DependencyInjection\ContainerInterface;
++
++/**
++ * Use URL for link field values.
++ *
++ * @ResourceFieldEnhancer(
++ *   id = "url_link",
++ *   label = @Translation("URL for link (link field only)"),
++ *   description = @Translation("Use Url for link fields.")
++ * )
++ */
++class UrlLinkEnhancer extends ResourceFieldEnhancerBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  public function defaultConfiguration() {
++    return [
++      'absolute_url' => 0,
++    ];
++  }
++
++  /**
++   * {@inheritDoc}
++   */
++  public function getSettingsForm(array $resource_field_info) {
++    $settings = empty($resource_field_info['enhancer']['settings'])
++      ? $this->getConfiguration()
++      : $resource_field_info['enhancer']['settings'];
++    $form = parent::getSettingsForm($resource_field_info);
++    $form['absolute_url'] = [
++      '#type' => 'checkbox',
++      '#title' => 'Get Absolute Urls',
++      '#default_value' => $settings['absolute_url'],
++    ];
++
++    return $form;
++  }
++
++  /**
++   * {@inheritDoc}
++   */
++  protected function doUndoTransform($data, Context $context) {
++    $values = $data;
++
++    if (isset($data['uri'])) {
++      try {
++        $url = Url::fromUri($data['uri'], array ('language' => \Drupal::languageManager()->getCurrentLanguage()));
++
++        // Use absolute urls if configured.
++        $configuration = $this->getConfiguration();
++        if ($configuration['absolute_url']) {
++          $url->setAbsolute(TRUE);
++        }
++
++        $values['url'] = $url->toString();
++      }
++      catch (\Exception $e) {
++        \Drupal::logger('jsonapi_extras')->error('Failed to create a URL from uri @uri. Error: @error', [
++          '@uri' => $data['uri'],
++          '@error' => $e->getMessage(),
++        ]);
++      }
++    }
++
++    return $values;
++  }
++
++  /**
++   * {@inheritDoc}
++   */
++  protected function doTransform($value, Context $context) {
++  }
++
++  /**
++   * {@inheritDoc}
++   */
++  public function getOutputJsonSchema() {
++    return [
++      'type' => 'object',
++      'properties' => [
++        'uri' => ['type' => 'string'],
++        'title' => ['type' => 'string'],
++        'options' => ['type' => 'array'],
++        'url' => ['type' => 'string'],
++      ]
++    ];
++  }
++
++}

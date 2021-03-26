@@ -1,11 +1,11 @@
 diff --git a/modules/gatsby_endpoints/gatsby_endpoints.module b/modules/gatsby_endpoints/gatsby_endpoints.module
-index cbf4b05..6ada03b 100644
+index 8af8cda..a379b17 100644
 --- a/modules/gatsby_endpoints/gatsby_endpoints.module
 +++ b/modules/gatsby_endpoints/gatsby_endpoints.module
 @@ -112,7 +112,7 @@ function gatsby_endpoints_form_alter(&$form, FormStateInterface $form_state, $fo
  
      // Override node edit form.
-     if (!empty($preview_settings[$node_type]) && $preview_url) {
+     if (!empty($preview_settings) && $preview_url) {
 -      $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $node->id());
 +      $alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $node->id());
  
@@ -21,18 +21,15 @@ index cbf4b05..6ada03b 100644
        // Add Gatsby Preview button.
        $form['actions']['gatsby_preview'] = [
          '#type' => 'button',
-@@ -183,7 +186,13 @@ function gatsby_endpoints_node_view(array &$build, $entity, $display, $view_mode
+@@ -183,7 +186,10 @@ function gatsby_endpoints_node_view(array &$build, $entity, $display, $view_mode
          return;
        }
  
 -      $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $node->id());
 +      $alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $node->id());
-+      \Drupal::logger('gatsby_endpoints')->notice($alias);
 +
 +      $sites = array("/amp", "/bnp", "/cinp", "/corp", "/knp", "/ninp", "/pknp", "/uktnp");
 +      $alias = str_replace($sites, "", $alias);
-+
-+      \Drupal::logger('gatsby_endpoints')->notice($alias);
  
        // If this is the front-page we don't want to pass the alias
        // (as Gatsby will likely 404).
