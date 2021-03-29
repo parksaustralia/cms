@@ -1,8 +1,8 @@
-diff --git a/src/Plugin/jsonapi/FieldEnhancer/UrlLinkEnhancer.php b/src/Plugin/jsonapi/FieldEnhancer/UrlLinkEnhancer.php
+diff --git a/modules/jsonapi_extras/src/Plugin/jsonapi/FieldEnhancer/UrlLinkEnhancer.php b/modules/jsonapi_extras/src/Plugin/jsonapi/FieldEnhancer/UrlLinkEnhancer.php
 new file mode 100644
 index 0000000..3b4b204
 --- /dev/null
-+++ b/src/Plugin/jsonapi/FieldEnhancer/UrlLinkEnhancer.php
++++ b/modules/jsonapi_extras/src/Plugin/jsonapi/FieldEnhancer/UrlLinkEnhancer.php
 @@ -0,0 +1,97 @@
 +<?php
 +

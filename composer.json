@@ -80,7 +80,7 @@
         "pa-gatsby-endpoints-2": "./patches/pa-gatsby-endpoints-2.patch"
       },
       "jsonapi_extras": {
-        "url_link_enhancer-2942851-38": "./patches/jsonapi_extras-url_link_enhancer-2942851-38.patch"
+        "url_link_enhancer-2942851-38-fix": "./patches/jsonapi_extras-url_link_enhancer-2942851-38-fix.patch"
       }
     }
   },
