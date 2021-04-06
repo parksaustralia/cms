@@ -78,9 +78,18 @@ index 4baed37..43a575b 100644
        // The legacy URL expects an encoded JSON string.
        $json = json_encode($json);
 diff --git a/src/GatsbyPreview.php b/src/GatsbyPreview.php
-index dc6f44a..ec293a3 100644
+index dc6f44a..e7ef46e 100644
 --- a/src/GatsbyPreview.php
 +++ b/src/GatsbyPreview.php
+@@ -86,7 +86,7 @@ class GatsbyPreview {
+     $preview_url = $settings->get('server_url');
+ 
+     if ($preview_url) {
+-      $this->updateData('preview', $preview_url, FALSE, "/__refresh");
++      $this->updateData('preview', $preview_url, FALSE, "/");
+     }
+ 
+     $incrementalbuild_url = $settings->get('incrementalbuild_url');
 @@ -113,7 +113,7 @@ class GatsbyPreview {
        'action' => 'delete',
      ];

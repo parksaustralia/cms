@@ -77,7 +77,7 @@
         "jsonapi-filtering-3036593-118": "./patches/drupal-3036593-118.patch"
       },
       "drupal/gatsby": {
-        "pa-gatsby-endpoints-1": "./patches/pa-gatsby-endpoints-1.patch"
+        "pa-gatsby-endpoints-5": "./patches/pa-gatsby-endpoints-5.patch"
       }
     }
   },
