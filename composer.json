@@ -20,7 +20,7 @@
     "drupal/key_auth": "1.1.0",
     "drupal/paragraphs": "1.12.0",
     "drupal/pathauto": "1.8.0",
-    "drupal/svg_image": "^1.14",
+    "drupal/svg_image": "1.14.0",
     "drupal/unmanaged_files": "1.0.0",
     "drush/drush": "10.4.0",
     "enlightn/security-checker": "1.7.0",
