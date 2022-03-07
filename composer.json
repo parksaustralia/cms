@@ -23,7 +23,7 @@
     "drupal/svg_image": "1.14.0",
     "drupal/unmanaged_files": "1.0.0",
     "drush/drush": "10.4.0",
-    "enlightn/security-checker": "1.7.0",
+    "enlightn/security-checker": "1.10.0",
     "pantheon-upstreams/upstream-configuration": "*"
   },
   "conflict": {
