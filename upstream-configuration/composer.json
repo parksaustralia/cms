@@ -13,7 +13,7 @@
         "drupal/core-composer-scaffold": "9.1.5",
         "drupal/core-recommended": "9.1.5",
         "pantheon-systems/drupal-integrations": "9.0.1",
-        "cweagans/composer-patches": "1.7.0",
+        "cweagans/composer-patches": "1.7.3",
         "zaporylie/composer-drupal-optimizations": "1.2.0"
     }
 }
